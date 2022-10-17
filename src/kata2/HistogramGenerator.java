@@ -18,5 +18,6 @@ public class HistogramGenerator <T> {
             map.put(data[i],map.containsKey(data[i]) ? map.get(data[i]) + 1 : 1);
         }
         return map;
+        
     }
 }
