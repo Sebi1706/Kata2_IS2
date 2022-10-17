@@ -3,28 +3,24 @@ package kata2;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Kata2 {
 
+    
     public static void main(String[] args) {
+        int [] data = {1,4,4,6,3,7,1,9,8,5,3,2,6,1,7};
         
-        int[] data = {1,2,3,4,6,8,9,2,1,3,0,2,4,5,8};
+        Map <Integer, Integer> histogram = new HashMap<Integer, Integer>();
         
-        Map<Integer, Integer> histogram = new HashMap<Integer, Integer>();
-        
-        for (int i = 0; i < data.length; i++) {
-            if(histogram.containsKey(data[i])){
-                histogram.put(data[i], histogram.get(data[i])+1);
-            }
-            else{
-                histogram.put(data[i], 1);
-            }
+        for (int i = 0; i< data.length; i++){
+            histogram.put(data[i],histogram.containsKey(data[i]) ? histogram.get(data[i]) + 1 : 1);
+            
             
         }
         
-        for(Integer key: histogram.keySet()){
-           System.out.println(key + " ==> " + histogram.get(key)); 
+        for (Map.Entry<Integer, Integer> entry : histogram.entrySet()){
+            System.out.println(entry.getKey() + " ==> " + entry.getValue());
         }
-    
     }
     
 }
