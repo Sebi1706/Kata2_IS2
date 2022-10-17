@@ -3,16 +3,16 @@ package kata2;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HistogramGenerator {
-    private final int[] data;
+public class HistogramGenerator <T> {
+    private final T[] data;
 
-    public HistogramGenerator(int[] data) {
+    public HistogramGenerator(T[] data) {
         this.data = data;
     }
     
     
-    public Map<Integer, Integer> getHistogram(){
-        Map <Integer, Integer> map = new HashMap <Integer, Integer>();
+    public Map<T, Integer> getHistogram(){
+        Map <T, Integer> map = new HashMap <T, Integer>();
         //...
         for (int i = 0; i< this.data.length; i++){
             map.put(data[i],map.containsKey(data[i]) ? map.get(data[i]) + 1 : 1);

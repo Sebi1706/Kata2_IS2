@@ -9,9 +9,9 @@ public class Kata2 {
     
     
     public static void main(String[] args) {
-        int [] data = {1,4,4,6,3,7,1,9,8,5,3,2,6,1,7};
+        Integer [] data = {1,4,4,6,3,7,1,9,8,5,3,2,6,1,7};
         
-        HistogramGenerator histogramGenerator = new HistogramGenerator(data);
+        HistogramGenerator<Integer> histogramGenerator = new HistogramGenerator(data);
 
         Map<Integer, Integer> histogram = histogramGenerator.getHistogram();
         
